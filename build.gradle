@@ -12,19 +12,24 @@ plugins {
     id 'application'
 }
 
+applicationDefaultJvmArgs = ["-Dserver.port=8888"]
+
 apply plugin: 'org.springframework.boot'
 
-mainClassName = 'App'
+jar {
+    baseName = 'gs-spring-boot'
+    version =  '0.1.0'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
 
 dependencies {
     compile 'com.google.guava:guava:23.0'
     compile "org.springframework.boot:spring-boot-starter-web"
     testCompile 'junit:junit:4.12'
-}
-
-repositories {
-    jcenter()
 }
