@@ -1,4 +1,4 @@
-package helloworld;
+package com.helloworld;
 
 public class Greeting {
 

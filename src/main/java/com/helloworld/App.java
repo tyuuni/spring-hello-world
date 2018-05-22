@@ -1,4 +1,4 @@
-package helloworld;
+package com.helloworld;
 
 import java.util.Arrays;
 
