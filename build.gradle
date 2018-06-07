@@ -30,9 +30,17 @@ repositories {
 
 dependencies {
     compile 'com.google.guava:guava:23.+'
-    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'commons-io:commons-io:2.+'
+    compile 'org.apache.logging.log4j:log4j-core:2.+'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.+'
+    compile 'org.springframework.boot:spring-boot-starter-web:2.+'
+    compile 'org.mybatis:mybatis:3.+'
+    compile 'org.apache.commons:commons-csv:1.+'
+    compile 'io.projectreactor:reactor:2.0.8.RELEASE'
 
     testCompile 'junit:junit:4.+'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
-    testCompile 'org.springframework:spring-test'
+    testCompile 'org.springframework.boot:spring-boot-starter-test:2.+'
+    testCompile 'org.springframework:spring-test:5.+'
 }
+
+task compileAll(dependsOn: ['compileJava', 'compileTestJava']);
